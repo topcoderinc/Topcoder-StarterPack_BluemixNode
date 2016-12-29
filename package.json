@@ -1,0 +1,104 @@
+{
+  "name": "bluemix-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "dev": "better-npm-run dev",
+    "start": "better-npm-run start",
+    "e2e": "better-npm-run e2e",
+    "e2e:watch": "better-npm-run e2e:watch",
+    "spec": "better-npm-run spec",
+    "coverage": "better-npm-run spec && npm run check-coverage",
+    "spec:watch": "better-npm-run spec:watch",
+    "test": "npm run lint && npm run spec && npm run check-coverage && npm run e2e",
+    "check-coverage": "babel-istanbul check-coverage --statement 80 --branch 80 --function 80"
+  },
+  "betterScripts": {
+    "dev": {
+      "command": "nodemon -i test-e2e --exec babel-node src/app | bunyan -o short -l trace",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "start": {
+      "command": "babel-node src/app",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "spec": {
+      "command": "babel-node node_modules/babel-istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- test/**/*.spec.js -r test/setup.js",
+      "env": {
+        "NODE_ENV": "test"
+      }
+    },
+    "spec:watch": {
+      "command": "mocha -w --compilers js:babel-register -r test/setup.js test/**/*.spec.js",
+      "env": {
+        "NODE_ENV": "test"
+      }
+    },
+    "e2e": {
+      "command": "mocha -b --compilers js:babel-register -r test/setup.js test-e2e/**/*.spec.js",
+      "env": {
+        "NODE_ENV": "test"
+      }
+    },
+    "e2e:watch": {
+      "command": "mocha -w --compilers js:babel-register -r test/setup.js test-e2e/**/*.spec.js",
+      "env": {
+        "NODE_ENV": "test"
+      }
+    }
+  },
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/topcoderinc/Topcoder-StarterPack_BluemixNode.git"
+  },
+  "keywords": [
+    "starter",
+    "pack",
+    "boilerplate"
+  ],
+  "bugs": {
+    "url": "https://github.com/topcoderinc/Topcoder-StarterPack_BluemixNode/issues"
+  },
+  "dependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "better-npm-run": "0.0.13",
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
+    "bunyan": "^1.8.1",
+    "config": "^1.24.0",
+    "cors": "^2.8.1",
+    "decorate-it": "^1.1.0",
+    "express": "^4.14.0",
+    "express-api-error-handler": "^1.0.1",
+    "express-domain-middleware": "^0.1.0",
+    "express-wrap-async": "^1.0.2",
+    "http-errors": "^1.5.0",
+    "joi": "^10.0.6",
+    "lodash": "^4.17.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-istanbul": "^0.12.1",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "eslint-config-topcoder": "^1.2.0",
+    "eslint-plugin-babel": "^4.0.0",
+    "mocha": "^3.0.2",
+    "nodemon": "^1.10.2",
+    "sinon": "^1.17.6",
+    "sinon-chai": "^2.8.0",
+    "supertest": "^2.0.0"
+  }
+}
