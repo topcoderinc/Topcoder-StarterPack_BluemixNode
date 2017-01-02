@@ -1,0 +1,27 @@
+swagger: '2.0'
+
+info:
+  version: "0.0.1"
+  title: Blue mix starter
+
+basePath: /api
+schemes:
+  - http
+consumes:
+- application/json
+produces:
+- application/json
+
+paths:
+  /test:
+    get:
+      description: Test method
+
+      responses:
+        200:
+          description: successful operation
+          schema:
+            type: object
+            properties:
+              success:
+                type: boolean

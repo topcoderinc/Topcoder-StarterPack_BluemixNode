@@ -1,8 +1,12 @@
+### Node template
+
+config/local.json
+
 # Logs
 logs
 *.log
 npm-debug.log*
-
+dist
 # Runtime data
 pids
 *.pid
@@ -35,3 +39,4 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+

@@ -1,0 +1,34 @@
+{
+	"id": "17998025-8efe-86b4-bad2-930d50480ead",
+	"name": "Bluemix starter",
+	"description": "",
+	"order": [
+		"81da9d25-4861-5890-78bb-2e3f9838213b"
+	],
+	"folders": [],
+	"timestamp": 1482319894033,
+	"owner": "62523",
+	"public": false,
+	"requests": [
+		{
+			"id": "81da9d25-4861-5890-78bb-2e3f9838213b",
+			"headers": "",
+			"url": "{{URL}}/test",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "17998025-8efe-86b4-bad2-930d50480ead",
+			"data": null,
+			"dataMode": "params",
+			"name": "Test method",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1482319969191,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
