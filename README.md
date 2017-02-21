@@ -38,9 +38,9 @@ A starter pack for nodejs with bluemix deployment.
 3. pick *SDK for Node.js*
 4. pick any free *App name* and click *Create*
 5. Click on the app and go to tab *Getting started*
-6. (optional) Copy manifest.yml from *DOWNLOAD STARTER CODE* to the application directory
-7. Complete steps 2-7 for deployment
-8. if you copied `manifest.yml` you can just run `cf push` for redeployment
+6. Download the Starter Code from Bluemix by clicking *DOWNLOAD STARTER CODE*
+7. Unpack this starter code to a different location, and *only* copy the manifest.yml to your project directory
+8. If you copied `manifest.yml` to your project directory, you can just run `cf push` for deployment.  If you didn't copy over the manifest.yml, you'll have to tell `cf push <appnamehere>`
 
 ## Testing
 Import `postman/Bluemix starter.postman_collection.json` collection and `postman/bluemix starter.postman_environment.json` environment.  
