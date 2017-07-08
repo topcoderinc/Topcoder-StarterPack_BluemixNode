@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+   "node": "7"
+  },
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
